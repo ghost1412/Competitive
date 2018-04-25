@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+
+string bfs(int n)
+{	long long a;
+	pair<string,int> x;
+	list<pair<string,int>> q;
+	q.push_back(pair<string,int>("1",1));
+	while(!q.empty())
+	{
+		x=q.front();
+		a=x.second;
+		if(a%n==0)
+		{
+			return x.first;
+		}	
+		x.second%=n;
+		q.pop_front();
+		q.push_back({x.first+"0",x.second*10});
+		q.push_back({x.first+"1",x.second*10+1});
+	}
+}
+int main()
+{
+	int t; 
+	cin>>t;
+	int n;
+	while(t--)
+	{
+		cin>>n;
+		cout<<bfs(n)<<endl;
+	}
+	return 0;
+}
