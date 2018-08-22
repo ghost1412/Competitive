@@ -19,7 +19,7 @@ bool operator <( edge a, edge b ) {
 }
 class Graph
 {   
-	int u,v;
+    int u,v;
     int V;                                     // No. of vertices
     vector<edge> *adj;              //adjecentry list
     
@@ -67,7 +67,7 @@ int Graph::dijkstra(int s,int t){
 		}
      }cout<<dist[t];
 }
-/*
+
 int Graph::bellman_ford(int s,int t,int m){
 	int dist[this->V];
 	for(int i=0;i<V;i++)
@@ -84,9 +84,10 @@ int Graph::bellman_ford(int s,int t,int m){
             if (dist[u] != inf && dist[u] + weight < dist[v])
                 dist[v] = dist[u] + weight;
         }
-    }cout<<dist[t];
+    }
+    cout<<dist[t];
 }
-*/
+
 /*
 int main(){
 	int n,m; cin>>n>>m;
