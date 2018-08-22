@@ -23,14 +23,14 @@ class LinkedList
         void clear();
         void push_front(T insert);
         bool pop_front();
-  		T& front();
-  		void decrefcount(){
-  			refcount--;
-  		}
-  		void increfcount(){
-  			refcount++;
-  		}
-  		//void splice(iterator postion,LinkedList& x);
+  	T& front();
+  	void decrefcount(){
+  		refcount--;
+  	}
+  	void increfcount(){
+  		refcount++;
+  	}
+  	//void splice(iterator postion,LinkedList& x);
   	//	void splice(iterator postion,LinkedList& x,iterator i);
   	//	void splice(iterator postion,LinkedList& x,iterator first,iterator last);
 
