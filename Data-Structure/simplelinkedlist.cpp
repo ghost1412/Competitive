@@ -3,22 +3,22 @@
 using namespace std;
 
 struct Node{
-int data;
-struct Node *next;
+	int data;
+	struct Node *next;
 };
 
 struct Node *head=NULL;
 
 void Reverse()
 {
- Node *t,*tail;tail=NULL;
-    while(head!=NULL){
-        t=head->next;
-        head->next=tail;
-        tail=head;
-        head=t;
-    }
-    head=tail;
+	Node *t,*tail;tail=NULL;
+	while(head!=NULL){
+		t=head->next;
+		head->next=tail;
+		tail=head;
+		head=t;
+	}
+    	head=tail;
 }
 void Insertcir(int data,int position){
 	Node *t=new Node;
@@ -55,40 +55,39 @@ void InsertNth(int data, int position)
 		head->next=temp1;
 	}else{
 		for(int i=0;i<=position-2;i++){
-		temp2=temp2->next;
+			temp2=temp2->next;
 		}
 	 	temp1->next=temp2->next;
-		 temp2->next=temp1;
+		temp2->next=temp1;
 		head=root;
 	}
 }
 
 Node* Delete(int position) {
 struct Node *current=head;
-	if(position==0)
-		{
+	if(position==0){
 		head=head->next;
-
 	}
-	while(position>1)
-		{
+	while(position>1){
 		current=current->next;
 		position--;
-}
+	}
 
-struct Node *de=current->next;
+	struct Node *de=current->next;
 	current->next=(current->next)->next;
 	free(de);
 }
 
-void print(){Node *t=head;
+void print(){
+	Node *t=head;
 	while(t!=NULL){
 	   cout<<(t->data);
 	   t=t->next;
 	   cout<<"->";
+	}
+	cout<<endl;
 }
-cout<<endl;
-}
+
 int main(){
 	cout<<"1=insert"<<" "<<"2=delete"<<" "<<"3=reverse"<<" "<<"4=print"<<" "<<"5=exit"<<" "<<"6=use as circular"<<endl;
 	while(1){
@@ -110,9 +109,10 @@ int main(){
 			print();
 		}
 		if(x==6){
-				if(x=="q"){int y,u; cin>>y;cin>>u;
-				    Insertcir(y,u);
-				}
+			if(x=="q"){
+				int y,u; cin>>y;cin>>u;
+				Insertcir(y,u);
+			}
 		}
 	}
 }
