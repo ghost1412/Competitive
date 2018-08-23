@@ -37,7 +37,12 @@ void Insertcir(int data,int position){
 }
 void InsertNth(int data, int position)
 {
-	Node *temp1=new Node;Node *root=head; temp1->next=NULL; Node *temp2=head;temp1->data=data;
+	Node *temp1=new Node;
+	Node *root=head;
+	temp1->next=NULL;
+	Node *temp2=head;
+	temp1->data=data;
+	
 	if (head == NULL) {
 		    head=temp1;
 		}else
