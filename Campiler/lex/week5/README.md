@@ -1,3 +1,5 @@
+<p> lex program to check whether a given string satisfly the predefined grammer
+
 <p>To build: 
 	make
 <\p>
